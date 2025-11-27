@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🍪 <span style="margin-left: 10px;">Cookie管理小工具</span></h1>
+      <div class="domain-info">
+        <!-- Added domain selector for subdomain support -->
+        <select id="domain-selector" class="domain-selector">
+          <option value="">加载中...</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button id="add-cookie" class="btn btn-primary">+ 新增Cookie</button>
+      <button id="clear-all" class="btn btn-danger">🗑️ 清空所有</button>
+      <button id="refresh" class="btn btn-secondary">🔄 刷新</button>
+    </div>
+
+    <div class="search-box">
+      <input type="text" id="search" placeholder="搜索Cookie名称...">
+    </div>
+
+    <div class="cookie-list" id="cookie-list">
+      <div class="loading">正在加载Cookie...</div>
+    </div>
+
+    <!-- 添加/编辑Cookie模态框 -->
+    <div id="cookie-modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 id="modal-title">新增Cookie</h3>
+          <span class="close">&times;</span>
+        </div>
+        <div class="modal-body">
+          <form id="cookie-form">
+            <div class="form-group">
+              <label for="cookie-name">名称 *</label>
+              <input type="text" id="cookie-name" required>
+            </div>
+            <div class="form-group">
+              <label for="cookie-value">值 *</label>
+              <textarea id="cookie-value" required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="cookie-domain">域名</label>
+              <input type="text" id="cookie-domain" placeholder="例如: .example.com">
+            </div>
+            <div class="form-group">
+              <label for="cookie-path">路径</label>
+              <input type="text" id="cookie-path" value="/" placeholder="/">
+            </div>
+            <div class="form-group">
+              <label for="cookie-expires">过期时间</label>
+              <input type="datetime-local" id="cookie-expires">
+            </div>
+            <div class="form-group checkbox-group">
+              <label>
+                <input type="checkbox" id="cookie-secure"> Secure
+              </label>
+              <label>
+                <input type="checkbox" id="cookie-httponly"> HttpOnly
+              </label>
+              <label>
+                <input type="checkbox" id="cookie-session"> Session Cookie
+              </label>
+            </div>
+            <div class="form-group">
+              <label for="cookie-samesite">SameSite</label>
+              <select id="cookie-samesite">
+                <option value="no_restriction">None</option>
+                <option value="lax" selected>Lax</option>
+                <option value="strict">Strict</option>
+              </select>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="save-cookie" class="btn btn-primary">保存</button>
+          <button type="button" id="cancel-cookie" class="btn btn-secondary">取消</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
