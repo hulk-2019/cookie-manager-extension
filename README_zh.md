@@ -3,7 +3,7 @@
 # 🎨 Cookie管理小工具 (Cookie Manager)
 
 <div align="center">
-  <img src="/public/demo.png" alt="Cookie Manager Extension" width="400"/>
+  <img src="/public/example.png" alt="Cookie Manager Extension" width="400"/>
   <br>
   <br>
 </div>

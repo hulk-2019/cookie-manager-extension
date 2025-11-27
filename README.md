@@ -3,7 +3,7 @@ English | [简体中文](/README_zh.md)
 # 🎨 Cookie Manager Extension
 
 <div align="center">
-  <img src="/public/demo.png" alt="Cookie Manager Extension" width="400"/>
+  <img src="/public/example.png" alt="Cookie Manager Extension" width="400"/>
   <br>
   <br>
 </div>
