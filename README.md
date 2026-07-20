@@ -1,9 +1,9 @@
 English | [简体中文](/README_zh.md)
 
-# 🎨 Cookie Manager Extension
+# 🎨 Cookie Manager
 
 <div align="center">
-  <img src="/public/example.png" alt="Cookie Manager Extension" width="400"/>
+  <img src="/public/example.png" alt="Cookie Manager" width="400"/>
   <br>
   <br>
 </div>

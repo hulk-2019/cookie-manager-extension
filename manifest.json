@@ -9,7 +9,7 @@
   ],
   "action": {
     "default_popup": "popup.html",
-    "default_title": "Cookie Manager Extension"
+    "default_title": "Cookie Manager"
   },
   "background": {
     "service_worker": "background.js"
