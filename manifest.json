@@ -3,7 +3,7 @@
   "name": "Cookie Manager",
   "version": "1.0",
   "description": "Manage website Cookies - Supports add, edit, delete, and clear functions.",
-  "permissions": ["cookies", "activeTab", "storage"],
+  "permissions": ["cookies"],
   "host_permissions": [
     "*://*/*"
   ],
