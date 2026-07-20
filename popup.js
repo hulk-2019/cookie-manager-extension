@@ -134,6 +134,8 @@ class CookieManager {
   }
 
   initI18n() {
+    // 让 datetime-local 等原生控件的界面文案(日期格式、选择框文字)跟随当前语言
+    document.documentElement.lang = this.currentLang === 'zh' ? 'zh-CN' : 'en'
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n')
       if (locales[this.currentLang][key]) {
